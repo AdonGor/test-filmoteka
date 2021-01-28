@@ -1,0 +1,122 @@
+header {
+  height: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 41px;
+  padding-bottom: 60px;
+
+  background-color: $basic-black-color;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.56),
+      rgba(0, 0, 0, 0.56)
+    ),
+    url(../images/header/header-bcg-320.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: $basic-white-color;
+  
+  @media screen and (max-width: $mobile) {
+      max-width: $mobile;
+    }
+  
+    @media screen and (min-width: $mobile + 1px) and (max-width: $tablet) {
+      max-width: $tablet;
+  
+      background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(../images/header/header-bcg-768.jpg);
+    }
+  
+    @media screen and (min-width: $tablet + 1px) {
+      background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(../images/header/header-bcg-1024.jpg);
+    }
+  
+    @media screen and (min-width: $desktop + 1px) {
+      background-size: contain;
+    }
+}
+
+.wrapper-nav {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 70px;
+  flex-grow: 1;
+  @media screen and (max-width: 480px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+}
+
+.main-nav {
+  display: flex; 
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 37px;       
+}
+
+.logo-nav {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-nav img {
+  margin-right: 12px;
+}
+
+.logo-text-nav {
+  color: $basic-white-color;
+  line-height: 1.17;
+  font-weight: 500;
+  font-size: 30px;
+
+  @media screen and (max-width: 480px) {
+      display: none;
+  }
+}
+
+.header-list-nav {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.header-list-nav > li:not(:last-child) {
+  margin-right: 39px;
+}
+
+.header-link-nav {
+  color: $basic-white-color;
+  position: relative;  
+  &:hover,
+  &:focus {
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+&::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: 4px;
+  content: "";
+  transform: scaleX(0);
+}
+&:hover::after {
+  background-color: $orange-active;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scaleX(1);
+}
+}
+  
