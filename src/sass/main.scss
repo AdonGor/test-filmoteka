@@ -1,11 +1,9 @@
-@import './base/normalize';
-@import './utils/variables';
-@import './base/common';
-@import './layout/header';
+@import './base/commons';
+@import './components/film-card';
+@import './components/modal';
+@import './layout/home-header';
+@import './layout/library-header';
 @import './layout/main-section';
-@import './layout/paginator';
 @import './layout/footer';
-
-
-
-
+@import './utils/variables';
+@import './utils/placeholders';

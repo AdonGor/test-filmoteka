@@ -1,16 +1,31 @@
 html {
     box-sizing: border-box;
   }
+  
   *,
   *::before,
   *::after {
     box-sizing: inherit;
   }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
+  
   h1,
   h2,
   h3,
@@ -19,25 +34,17 @@ html {
   h6 {
     margin: 0;
   }
+  
   p {
     margin: 0;
   }
-  img {
-    display: block;
-    height: auto;
-  }
+  
   a {
     text-decoration: none;
   }
+  
   body {
-    font-family: $basic-font;
-    font-weight: 500;
-    font-size: 12px;
-    // color: $primary-black-color;
-
-    background-color: rgb(68, 72, 73);
-
-    // background-color: $primary-white-color;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
   }
-
   
