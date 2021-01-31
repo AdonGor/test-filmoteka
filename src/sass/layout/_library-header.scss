@@ -1,0 +1,233 @@
+.header-library {
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 41px;
+    padding-bottom: 60px;
+  
+    background-color: #000000;
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/header-library-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    color: #ffffff;
+  
+    @media screen and (max-width: 320px) {
+      max-width: 320px;
+    }
+  
+    @media screen and (min-width: 320px + 1px) and (max-width: 768px) {
+      max-width: 768px;
+  
+      background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(../images/header-library-tablet.jpg);
+    }
+  
+    @media screen and (min-width: 768px + 1px) {
+      background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(../images/header-library-desktop.jpg);
+    }
+  
+    @media screen and (min-width: 1024px + 1px) {
+      background-size: contain;
+    }
+  }
+  
+  .wrapper-nav {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 70px;
+    flex-grow: 1;
+    @media screen and (max-width: 480px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  
+  .main-nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 37px;
+  }
+  
+  .logo-nav {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .logo-nav img {
+    margin-right: 12px;
+  }
+  
+  .logo-text-nav {
+    color: #ffffff;
+    line-height: 1.17;
+    font-weight: 500;
+    font-size: 30px;
+  
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+  
+  .header-list-nav {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  
+  .header-list-nav > li:not(:last-child) {
+    margin-right: 39px;
+  }
+  
+  .header-link-nav {
+    color: #ffffff;
+    position: relative;
+    &:hover,
+    &:focus {
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      margin-top: 4px;
+      content: '';
+      transform: scaleX(0);
+    }
+    &:hover::after {
+      background-color: #ff6b08;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scaleX(1);
+    }
+  }
+  
+  .wrapper-input {
+    position: relative;
+    max-width: 336px;
+    margin: 0 auto 22px auto;
+  }
+  
+  .wrapper-input input {
+    width: 100%;
+    padding: 4px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 0.5px solid #ffffff;
+    font: 400 14px/1.14 'Roboto', sans-serif;
+    color: #ffffff;
+  }
+  
+  .wrapper-input input::-moz-placeholder {
+    color: #ffffff;
+  }
+  
+  .wrapper-input input::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+  
+  .text-search-films {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 16px;
+    font-weight: 300;
+  }
+  
+  .input-label:focus-within > .text-search-films {
+    transform: translateY(30px);
+    color: #ff6b08;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/search-icon.svg);
+  }
+  
+  .error-sentence {
+    display: none;
+    color: #ff001b;
+    @media screen and (max-width: 480px) {
+      text-align: left;
+    }
+  }
+  .error-sentence.is-shown {
+    display: block;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .left-btn {
+    margin-right: 20px;
+  }
+
+  .left-btn, .right-btn {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    line-height: 1.33;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    @media screen and (min-width: 280px) {
+      padding-left: 28px;
+      padding-right: 28px;
+      width: 114px;
+    }
+  
+    @media screen and (min-width: 305px) {
+      padding-left: 36px;
+      padding-right: 36px;
+      width: 130px;
+    }
+  
+    @media screen and (min-width: 768px) {
+      padding-left: 38px;
+      padding-right: 38px;
+      width: 136px;
+  
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
+  //должна быть замена на active для js:
+  .left-btn:focus, .right-btn:focus {
+    outline: none;
+    background-color: #FF6B01;
+    border-color: #FF6B01;
+  }
+  .left-btn:hover, .right-btn:hover {
+    background-color:#FF6B01;
+    border-color: #FF6B01;
+  }

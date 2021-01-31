@@ -1,24 +1,24 @@
-header {
-    height: 230px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 41px;
-    padding-bottom: 60px;
-  
-    background-color: #000000;
+.header-home {
+  height: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 41px;
+  padding-bottom: 60px;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: #ffffff;
+
+  @media screen and (max-width: 320px) {
+    max-width: 320px;
+  }
     background-image: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0.56),
         rgba(0, 0, 0, 0.56)
       ),
       url(../images/header-bcg-320.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    color: #ffffff;
-  
-    @media screen and (max-width: 320px) {
-      max-width: 320px;
-    }
+
   
     @media screen and (min-width: 320px + 1px) and (max-width: 768px) {
       max-width: 768px;
@@ -153,10 +153,6 @@ header {
     font-size: 16px;
     font-weight: 300;
   }
-  
-//   .text-search-films:focus:required {
-//     color: #ffffff;
-//   }
   
   .input-label:focus-within > .text-search-films {
     transform: translateY(30px);
