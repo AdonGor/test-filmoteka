@@ -11,22 +11,24 @@ fetching();
 window.onload = function(){
 
   var paginationPage = parseInt($('.cdp').attr('actpage'), 10);
-  $('.cdp_i').on('click', function(){
+    $('.cdp_i').on('click', function(){
 
-    var go = $(this).attr('href').replace('#!', '');
-    if (go === '+1') {
-      paginationPage++;
-      fetching(plusOne());
+      var go = $(this).attr('href').replace('#!', '');
+      if (go === '+1') {
+        paginationPage++;
+        fetching(plusOne());
 
-    } else if (go === '-1') {
-      paginationPage--;
-      fetching(minusOne());
-    }else{
-      paginationPage = parseInt(go, 10);
-    }
-    $('.cdp').attr('actpage', paginationPage);
-
-  });
+      } else if (go === '-1') {
+        paginationPage--;
+        fetching(minusOne());
+      }else{
+        paginationPage = parseInt(go, 10);
+      }
+      $('.cdp').attr('actpage', paginationPage);
+      paginationPage
+      page = String(paginationPage);
+      fetching();
+    });
 };
 
 function fetching() {
@@ -68,3 +70,4 @@ function plusOne() {
 function minusOne() {
   page = page - 1;
 }
+
