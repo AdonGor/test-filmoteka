@@ -1,18 +1,20 @@
 {{#each this}}
 <li class="main-section-card">
-    {{#if backdrop_path}}
-    <img src="https://image.tmdb.org/t/p/original{{backdrop_path}}" class="card-top-img" data-id={{id}}
-        alt="{{title}}" />
+    {{#if poster_path}}
+    <img 
+    class="card-top-img"
+    src="https://image.tmdb.org/t/p/original{{poster_path}}"  data-id={{id}}
+    alt="{{title}}" />
     {{else}}
     <img data-id={{id}} class="movie-img" src="https://dummyimage.com/400x600/cfcfcf/ffffff&text=NO+IMAGE+AVAILABLE"
         alt="{{title}}" />
     {{/if}}
     <div class="card-body">
-        <h5 class="card-title">{{title}}</h5>
+        <h3 class="card-title">{{title}}</h3>
         {{#if genre_ids}}
-        <p class="card-text">{{genre_ids}}|{{release_date}}</p>
+        <p class="card-genre">{{genre_ids}}  |  {{release_date}}</p>
         {{else}}
-        <p class="card-text">{{release_date}}</p>
+        <p class="card-genre">{{release_date}}</p>
         {{/if}}
     </div>
 </li>

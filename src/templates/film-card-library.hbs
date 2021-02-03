@@ -1,0 +1,13 @@
+{{#each this}}
+ <div class="main-section-card">
+    <img 
+    src="{{poster_path}}" 
+    class="card-top-img"
+    alt="{{title}}" 
+    />
+     <div class="card-body">
+         <h5 class="card-title">{{title}}</h5>
+         <p class="card-genre">{{genre_ids}}     |      {{release_date}} <span class="vote-card">{{vote_average}}</span></p>
+     </div>
+ </div>
+{{/each}}

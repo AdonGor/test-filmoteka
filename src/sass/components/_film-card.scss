@@ -1,0 +1,49 @@
+.card-top-img {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main-section-card:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: rgb(32, 31, 31);
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.card-title,
+.card-genre,
+.vote-card {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;  
+}
+
+
+.card-title {
+    line-height: 1.167;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.card-genre {
+    display: inline-block;
+    line-height: 1.33;
+    color: #ff6b08;
+}
+
+.vote-card {
+    width: 36px;
+    height: 16px;
+    background: #FF6B01;
+    border-radius: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
